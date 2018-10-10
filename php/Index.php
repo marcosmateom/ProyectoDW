@@ -1,4 +1,13 @@
-﻿
+﻿<?php
+    $usuario = "root";
+    $contrasena = "";
+    $servidor = "localhost";
+    $basededatos = "gioscorp2";
+
+    $conexion = mysqli_connect($servidor,$usuario,$contrasena) or die("No se ha podido conectar al servidor de base de datos.");
+    $db = mysqli_select_db($conexion, $basededatos) or die("Parece que ha habido un error.");
+?>
+
 <!DOCTYPE html>
 
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
@@ -10,12 +19,9 @@
     <link rel="stylesheet" href="../css/foundation.css">
     <link rel="stylesheet" href="../css/app.css">
     <link rel="stylesheet" href="../css/css.css">
-    <style>
-        
-    </style>
 </head>
 <body>
-    <?php include('/partials/NavigationBar.php') ?>
+    <?php include('../controladores/navbar_c.php') ?>
     <div class="mainb" align="center">
     <?php 
         for ($i=0; $i < 6; $i++) { 
@@ -96,3 +102,6 @@
 
 </body>
 </html>
+<?php
+    mysqli_close($conexion);
+?>
