@@ -1,1 +1,0 @@
-UPDATE anuncio SET `column_name` = `new_value' [WHERE condition];
