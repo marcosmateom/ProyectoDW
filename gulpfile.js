@@ -6,7 +6,7 @@ var webserver = require('gulp-webserver');
 var Styles_f = function(done) {
     gulp.src('sass/**/*.scss')
         .pipe(sass().on('error', sass.logError))
-        .pipe(gulp.dest('css/'));
+        .pipe(gulp.dest('html/css/'));
     done();
 };
 
@@ -18,9 +18,9 @@ gulp.task('watch', function() {
 });
 
 gulp.task('webserver', function() {
-    gulp.src('app')
+    gulp.src('html')
         .pipe(webserver({
-            fallback: './sitetemplate.html',
+            fallback: './index.html',
             livereload: true,
             directoryListing: true,
             open: true

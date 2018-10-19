@@ -3,7 +3,8 @@
 
 footer {
   padding: 80px 0px 40px 0px;
-  background-color: orange; }
+  background-color: darkslategray;
+  color: white; }
 
 footer a {
   display: block; }
@@ -13,3 +14,9 @@ header {
 
 .mainb {
   padding: 0px 0px 100px 0px; }
+
+.imagendeanuncio {
+  display: block;
+  margin-left: auto;
+  width: 400px;
+  float: right; }
