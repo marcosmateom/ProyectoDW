@@ -2,19 +2,25 @@
   color: red; }
 
 .img_anuncio {
-  height: 100%;
+  /*height: 100%;*/
   width: auto; }
 
-.anuncio .img_anuncio {
-  max-height: 180px;
-  max-width: 100%;
-  min-height: 180px; }
+.anuncio {
+  height: 180px;
+  width: 100%; }
+  .anuncio .img_anuncio {
+    max-height: 180px;
+    max-width: 100%;
+    vertical-align: middle; }
 
 .cont {
   white-space: nowrap;
   width: auto;
   overflow: hidden;
   text-overflow: ellipsis; }
+
+.align {
+  margin: auto; }
 
 #Navigation_Bar_Logo {
   margin-right: 10px; }

@@ -3,7 +3,7 @@
 }
 
 .img_anuncio {
-    height: 100%;
+    /*height: 100%;*/
     width: auto;
 }
 
@@ -11,8 +11,10 @@
     .img_anuncio {
         max-height: 180px;
         max-width: 100%;
-        min-height: 180px;
+        vertical-align: middle;
     }
+    height: 180px;
+    width: 100%;
 }
 
 .cont {
@@ -20,6 +22,10 @@
     width: auto;
     overflow: hidden;
     text-overflow: ellipsis;
+}
+
+.align {
+    margin: auto;
 }
 
 @import "css";
