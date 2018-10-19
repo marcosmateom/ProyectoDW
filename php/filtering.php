@@ -7,6 +7,24 @@
     $conexion = mysqli_connect($servidor,$usuario,$contrasena) or die("No se ha podido conectar al servidor de base de datos.");
     $db = mysqli_select_db($conexion, $basededatos) or die("Parece que ha habido un error.");
     echo "Success";
+
+
+/*
+    if(isset($_POST['search']))
+    {
+
+    }
+    else {
+        $query = "SELECT datostecnicos, descripcion, fecha, masinformacion, titulo FROM anuncio";
+        $filter_Result = mysqli_query($conexion, $query);
+        //$search_result = filterTable($query);
+    }*/
+
+    /*function filterTable($query){
+        $filter_Result = mysqli_query($conexion, $query);
+        return $filter_Result;
+    }*/
+
 ?>
 
 <!DOCTYPE html>
@@ -24,74 +42,44 @@
 <body>
     <?php include('../controladores/navbar_c.php') ?>
     <div class="mainb" align="center">
-    <?php 
-        for ($i=0; $i < 6; $i++) { 
-            echo '
-            <div class="grid-container">
-            <div class="grid-x grid-margin-x grid-margin-y">
+    <!-- <form action="filtering.php" method="POST">
+    <input type="text" name="search" placeholder="Buscar"><br><br>
+    <input type="submit" name="Filter" value="Filtrar"><br><br>
+    </form> -->
 
-                <div class="cell small-12 medium-3">
-                    <div class="product-card">
-                        <div class="product-card-thumbnail">
-                            <a href="#"><img src="https://placehold.it/180x180"/></a>
-                        </div>
-                        <h2 class="product-card-title"><a href="#">Product Name</a></h2>
-                        <span class="product-card-desc">Product Description</span>
-                        <br/>
-                        <span class="product-card-price">$9.99</span>
-                        <br/>
-                        <button class="button">Comprar</button>
-                        <button class="button">Informacion</button>
-                    </div>
-                </div>
-                <div class="cell small-12 medium-3">
-                    <div class="product-card">
-                        <div class="product-card-thumbnail">
-                            <a href="#"><img src="https://placehold.it/180x180"/></a>
-                        </div>
-                        <h2 class="product-card-title"><a href="#">Product Name</a></h2>
-                        <span class="product-card-desc">Product Description</span>
-                        <br/>
-                        <span class="product-card-price">$9.99</span>
-                        <br/>
-                        <button class="button">Comprar</button>
-                        <button class="button">Informacion</button>
-                    </div>
-                </div>
-                <div class="cell small-12 medium-3">
-                    <div class="product-card">
-                        <div class="product-card-thumbnail">
-                            <a href="#"><img src="https://placehold.it/180x180"/></a>
-                        </div>
-                        <h2 class="product-card-title"><a href="#">Product Name</a></h2>
-                        <span class="product-card-desc">Product Description</span>
-                        <br/>
-                        <span class="product-card-price">$9.99</span>
-                        <br/>
-                        <button class="button">Comprar</button>
-                        <button class="button">Informacion</button>
-                    </div>
-                </div>
-                <div class="cell small-12 medium-3">
-                    <div class="product-card">
-                        <div class="product-card-thumbnail">
-                            <a href="#"><img src="https://placehold.it/180x180"/></a>
-                        </div>
-                        <h2 class="product-card-title"><a href="#">Product Name</a></h2>
-                        <span class="product-card-desc">Product Description</span>
-                        <br/>
-                        <span class="product-card-price">$9.99</span>
-                        <br/>
-                        <button class="button">Comprar</button>
-                        <button class="button">Informacion</button>
-                    </div>
-                </div>
+<?php 
 
-            </div>
+if(isset($_POST['search'])){ 
+        
+        
 
-        </div>';
-        }
-    ?>  
+      $value=$_POST['search']; 
+        
+       //echo $sql;
+      $sql = "CALL getData('$value')";
+      $result=mysqli_query($conexion, $sql);
+     
+        
+        while($row=mysqli_fetch_array($result)){ 
+                    $title =$row['titulo'];
+                    $tecData = $row['datostecnicos'];
+                    $description = $row['descripcion'];
+                    $date=$row['fecha']; 
+                    $moreInfo = $row['masinformacion'];
+                    
+            //-display the result of the array 
+        echo "<tr>\n"; 
+        echo "<table><tr> <th>Titulo</th><th>Datos tecnicos</th><th>Descripcion</th><th>Fecha</th><th>Mas informacion</th></tr>";
+                  echo "<tr>\n";  
+            echo "<td>"   .$title . "</td><td> " . $tecData .  "</td><td> " . $description .  "</td><td> " . $date .  "</td><td> " . $moreInfo .  "</td>\n"; 
+            echo "</tr>"; 
+        echo "</table>";
+      } 
+                         
+              }
+     
+?> 
+
     </div>
 
     <?php include('/partials/Footer.php') ?>
@@ -103,6 +91,3 @@
 
 </body>
 </html>
-<?php
-    mysqli_close($conexion);
-?>
