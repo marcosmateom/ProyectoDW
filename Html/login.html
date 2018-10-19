@@ -1,57 +1,61 @@
-
 <!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
-<meta charset="utf-8">
+    <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gio's Company - Login</title>
-    <link rel="stylesheet" href="../css/foundation.css">
-    <link rel="stylesheet" href="../css/app.css">
-    <link type="text/css" rel="stylesheet" href="../css/css.css">
+    <link rel="stylesheet" href="css/foundation.css">
+    <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="css/css.css">
+    <script src='js/vendor/foundation.js'></script>
     <style>
+
     </style>
 </head>
+
 <body>
     <!--Verificar la sesion para seleccionar que navbar mostrar-->
-<header>
- <!-- Navigation Bar -->
- <div class="top-bar" id="Navigation_Bar">
+    <header>
+        <!-- Navigation Bar -->
+        <div class="top-bar" id="Navigation_Bar">
             <div class="top-bar-left">
                 <ul class="menu">
-                  <figure>
+                    <figure>
                         <a href="index.html"><img src="../Imagenes/logo.jpg" class="logo" id="Navigation_Bar_Logo" /></a>
-                  </figure>
-                  <li><input type="search" placeholder="Search"></li>
-                  <li><button type="button" class="button">Search</button></li>
+                    </figure>
+                    <li><input type="search" placeholder="Search"></li>
+                    <li><button type="button" class="button">Search</button></li>
                 </ul>
             </div>
-          <div class="top-bar-right">
-            <ul class="dropdown menu" data-dropdown-menu>
-              <li><a href="index.html">Inicio</a></li>
-              <li><a href="login.html">Inicia Sesión</a></li>
-              <li><a href="register.html">Registrate</a></li>
-            </ul>
-          </div>
+            <div class="top-bar-right">
+                <ul class="dropdown menu" data-dropdown-menu>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="login.html">Inicia Sesión</a></li>
+                    <li><a href="register.html">Registrate</a></li>
+                </ul>
+            </div>
         </div>
- </header>        <div class="grid-container">
+    </header>
+    <div class="grid-container">
         <div class="grid-x align-center">
             <div class="cell small-5">
                 <form class="log-in-form" action='../controladores/login_c.html' method='post'>
-                            <h4 class="text-center">Inicia sesión</h4>
-                            <label class='' >E-mail
+                    <h4 class="text-center">Inicia sesión</h4>
+                    <label class=''>E-mail
                                 <input type="email" placeholder="somebody@example.com" name='email' required>
                             </label>
-                            <label class=''>Contaseña
+                    <label class=''>Contaseña
                                 <input type="password" placeholder="Contaseña" name='pswd' required>
                             </label>
-                                <small class="advice " style="display: none">Por favor, verifica los datos ingresados</small>                            <input id="show-password" type="checkbox"><label for="show-password">Mostrar contraseña</label>
-                                <p><input type="submit" class="button expanded" value="Submit"></p>
-                            <p class="text-center"><a href="#">¿Olvidaste tu constraseña?</a></p>
-                            
-                            <input type="text" style='display: none' name="sbmt" value='true'>
-                            </form>
-                            <p>Si todavía no tienes una cuenta haz click <a href="Register.html">aquí</a></p>
+                    <small class="advice " style="display: none">Por favor, verifica los datos ingresados</small> <input id="show-password" type="checkbox"><label for="show-password">Mostrar contraseña</label>
+                    <p><input type="submit" class="button expanded" value="Submit"></p>
+                    <p class="text-center"><a href="#">¿Olvidaste tu constraseña?</a></p>
+
+                    <input type="text" style='display: none' name="sbmt" value='true'>
+                </form>
+                <p>Si todavía no tienes una cuenta haz click <a href="Register.html">aquí</a></p>
             </div>
         </div>
     </div>
@@ -90,4 +94,5 @@
     <script src="js/app.js"></script>
 
 </body>
+
 </html>
