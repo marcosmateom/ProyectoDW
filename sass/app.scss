@@ -1,5 +1,10 @@
+$error-color: red;
+.estrella {
+    font-size: .65em;
+}
+
 .error {
-    color: red;
+    color: $error-color;
 }
 
 .img_anuncio {
