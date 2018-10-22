@@ -1,6 +1,5 @@
 ﻿<!DOCTYPE html>
 
-
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 
 <head>
@@ -15,7 +14,6 @@
 </head>
 
 <body>
-    <!--Verificar la sesion para seleccionar que navbar mostrar-->
     <header>
         <!-- Navigation Bar -->
         <div class="top-bar" id="Navigation_Bar">
@@ -25,14 +23,22 @@
                         <a href="index.html"><img src="Imagenes/logo.jpg" class="logo" id="Navigation_Bar_Logo" /></a>
                     </figure>
                     <li><input type="search" placeholder="Search"></li>
-                    <li><button type="button" class="button">Search</button></li>
+                    <li><button type="submit" class="button">Search</button></li>
                 </ul>
             </div>
             <div class="top-bar-right">
                 <ul class="dropdown menu" data-dropdown-menu>
-                    <li><a href="index.html">Inicio</a></li>
-                    <li><a href="login.html">Inicia Sesión</a></li>
-                    <li><a href="register.html">Registrate</a></li>
+                    <ul class="dropdown menu" data-accordion-menu>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a>Categorías</a>
+                            <ul class="menu vertical nested">
+                                <li><a href="cat.html">categoria1</a></li>
+                                <li><a href="cat.html">categoria2</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="login.html">Inicia Sesión</a></li>
+                        <li><a href="register.html">Regístrate</a></li>
+                    </ul>
                 </ul>
             </div>
         </div>
