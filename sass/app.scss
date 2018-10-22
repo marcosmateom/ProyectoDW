@@ -33,4 +33,18 @@ $error-color: red;
     margin: auto;
 }
 
+.mapouter {
+    text-align: right;
+    height: 500px;
+    width: 600px;
+}
+
+.gmap_canvas {
+    overflow: hidden;
+    background: none!important;
+    height: 400px;
+    width: 600px;
+    margin-top: 4em;
+}
+
 @import "css";
