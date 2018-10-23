@@ -77,12 +77,12 @@
 
                     <div class="tabs-content" data-tabs-content="example-tabs">
                         <div class="tabs-panel is-active" id="panel1">
-                            <h2>Mi Informacion</h2>
+                            <h3>Mi Información</h3>
                             <label>Usuario</label>
                             <span>Nombre del cliente</span>
                             <label>Correo</label>
                             <span>Correo del cliente</span>
-                            <label>Telefono</label>
+                            <label>Teléfono</label>
                             <span>1800 gioscorp</span>
                             <label>Clave</label>
                             <span>************</span><a href="cambio_clave.html"> Cambio de clave</a>
@@ -167,8 +167,11 @@
 
                         </div>
                         <div class="tabs-panel" id="panel3">
-                            <p>Three</p>
-                            <p>Check me out! I'm a super cool Tab panel with text content!</p>
+                            <h3>Fondos del Monedero</h3>
+                            <div class="fondosMonedero">
+                                <p>Q 0.00</p>
+                            </div>
+                            <button class="button" data-open="addFounds">Agregar Fondos al Monedero</button>
                         </div>
                     </div>
                 </div>
@@ -198,6 +201,45 @@
             </button>
         </div>
 
+        <div class="reveal" id="addFounds" data-reveal>
+            <div class="grid-container">
+                <form action="#" class="grid-x" method="post" enctype="multipart/form-data">
+                    <div class="small-12 cell">
+                        <h2>Agregar Fondos</h2>
+                    </div>
+                    <div class="small-12 cell">
+                        <h4>Cantidad:</h4>
+                    </div>
+                    <div class="input-group small-12 cell">
+                        <span class="input-group-label">Q</span>
+                        <input class="input-group-field" type="int" name="cantidad" value="" placeholder="Ingrese el monto">
+                    </div>
+                    <div class="small-12 cell">
+                        <h4>Información de la tarjeta:</h4>
+                    </div>
+                    <div class="input-group small-8 cell">
+                        <span class="input-group-label">Titular:</span>
+                        <input class="input-group-field" type="cvv" name='titular' pattern="[A-Za-z]+" placeholder="Nombre del titular de la tarjeta">
+                    </div>
+                    <div class="input-group small-4 cell">
+                        <span class="input-group-label">cvv:</span>
+                        <input class="input-group-field" type="cvv" name='cvv' pattern="[0-9]{3,4}" placeholder="### or ####">
+                    </div>
+                    <div class="input-group small-12 cell">
+                        <span class="input-group-label">Tarjeta:</span>
+                        <input class="input-group-field" type="card" name="tarjeta" placeholder="Ingrese el numero de la tarjeta" pattern="[0-9]+">
+                    </div>
+                    <div class="input-group small-12 cell">
+                        <span class="input-group-label">Fecha de Vencimiento:</span>
+                        <input class="input-group-field" type="month" name='fecha_vencimiento'>
+                    </div>
+                    <input class="button small-12 cell" type="submit" name="submit" value="Agregar fondos" />
+                </form>
+            </div>
+            <button class="close-button" data-close aria-label="Close modal" type="button">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
     </div>
     <footer>
         <div class="grid-container">
@@ -236,4 +278,4 @@
 
 </body>
 
-</html>
+</html3
