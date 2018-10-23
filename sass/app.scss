@@ -57,4 +57,13 @@ $error-color: red;
     margin-left: 0rem;
 }
 
+[class~=input-group-field] {
+    padding: 5px;
+}
+
+[class~=input-group-label] {
+    @extend [class~=input-group-field];
+    min-width: 55px;
+}
+
 @import "css";
