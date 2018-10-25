@@ -32,58 +32,68 @@
                     <figure>
                         <a href="index.html"><img src="Imagenes/logo.jpg" class="logo" id="Navigation_Bar_Logo" /></a>
                     </figure>
-                    <li><input type="search" placeholder="Search"></li>
-                    <li><button type="button" class="button">Search</button></li>
+                    <form>
+                        <li><input type="search" placeholder="Search"></li>
+                        <li><button type="submit" class="button">Search</button></li>
+                    </form>
                 </ul>
             </div>
             <div class="top-bar-right">
                 <ul class="dropdown menu" data-dropdown-menu>
-                    <li><a href="index.html">Inicio</a></li>
-                    <li><a href="login.html">Inicia Sesión</a></li>
-                    <li><a href="register.html">Registrate</a></li>
+                    <ul class="dropdown menu" data-accordion-menu>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a>Categorías</a>
+                            <ul class="menu vertical nested">
+                                <li><a href="cat.html">categoria1</a></li>
+                                <li><a href="cat.html">categoria2</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="login.html">Inicia Sesión</a></li>
+                        <li><a href="register.html">Regístrate</a></li>
+                    </ul>
                 </ul>
             </div>
         </div>
     </header>
     <div class="mainb">
-            <article>
-                <div class="grid-container">
-                    <h1 id="faqtitle">Preguntas Frecuentes</h1>
-                    <div class="grid-x grid-margin-x">
-                        <div class="cell small-6">
-                            <ul class="accordion" data-accordion>
-                                <li class="accordion-item is-active" data-accordion-item>
-                                    <a href="#" class="accordion-title">Como creo mi cuenta?</a>
-                                    <div class="accordion-content" data-tab-content >
-                                        <P>En la barra de navegacion, ingrese a "Registrate" y luego llena el formulario</P>
-                                    </div>
-                                </li>
-                                <li class="accordion-item" data-accordion-item>
-                                    <a href="#" class="accordion-title">Puedo pagar para destacaar un anuncio?</a>
-                                    <div class="accordion-content" data-tab-content>
-                                        <p>Si se puede hacer esto. Primero se debe comprar credito para destacar, y luego en "mis anuncios" puede seleccionar cual de sus anucios desea destacaar y proceda a realizar el pago</p>
-                                    </div>
-                                </li>
-                                <li class="accordion-item" data-accordion-item>
-                                    <a href="#" class="accordion-title">Si quiero borrar mi cuenta que hago?</a>
-                                    <div class="accordion-content" data-tab-content>
-                                            <p>Se puede hacer de dos maneras:<br>1. Contactando a uno de nuestros representantes para pedir que se elimine la cuenta. <br>2. Si su cuenta a estado inactiva por mas de un año, esta se eliminara solita</p>
-                                    </div>
-                                </li>
-                                <li class="accordion-item" data-accordion-item>
-                                        <a href="#" class="accordion-title">Es pagada la subscripcion a la pagina?</a>
-                                        <div class="accordion-content" data-tab-content>
-                                            <p>La subscripcion a Gio's corp es gratuita.</p>
-                                        </div>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="cell small-6">
-                            <img src="Imagenes/imegenproducto.jpg" alt="imagen de faqs">
-                        </div>
-                    </div>     
+        <article>
+            <div class="grid-container">
+                <h1 id="faqtitle">Preguntas Frecuentes</h1>
+                <div class="grid-x grid-margin-x">
+                    <div class="cell small-6">
+                        <ul class="accordion" data-accordion>
+                            <li class="accordion-item is-active" data-accordion-item>
+                                <a href="#" class="accordion-title">Como creo mi cuenta?</a>
+                                <div class="accordion-content" data-tab-content>
+                                    <P>En la barra de navegacion, ingrese a "Registrate" y luego llena el formulario</P>
+                                </div>
+                            </li>
+                            <li class="accordion-item" data-accordion-item>
+                                <a href="#" class="accordion-title">Puedo pagar para destacaar un anuncio?</a>
+                                <div class="accordion-content" data-tab-content>
+                                    <p>Si se puede hacer esto. Primero se debe comprar credito para destacar, y luego en "mis anuncios" puede seleccionar cual de sus anucios desea destacaar y proceda a realizar el pago</p>
+                                </div>
+                            </li>
+                            <li class="accordion-item" data-accordion-item>
+                                <a href="#" class="accordion-title">Si quiero borrar mi cuenta que hago?</a>
+                                <div class="accordion-content" data-tab-content>
+                                    <p>Se puede hacer de dos maneras:<br>1. Contactando a uno de nuestros representantes para pedir que se elimine la cuenta. <br>2. Si su cuenta a estado inactiva por mas de un año, esta se eliminara solita</p>
+                                </div>
+                            </li>
+                            <li class="accordion-item" data-accordion-item>
+                                <a href="#" class="accordion-title">Es pagada la subscripcion a la pagina?</a>
+                                <div class="accordion-content" data-tab-content>
+                                    <p>La subscripcion a Gio's corp es gratuita.</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="cell small-6">
+                        <img src="Imagenes/imegenproducto.jpg" alt="imagen de faqs">
+                    </div>
                 </div>
-            </article>
+            </div>
+        </article>
 
     </div>
     <footer>
@@ -99,8 +109,8 @@
                 <div class="cell auto">
                     <h4>Mapa del Sitio</h4>
                     <hr/>
-                    <a href="#">Inicio</a>
-                    <a href="#">Contactenos</a>
+                    <a href="index.html">Inicio</a>
+                    <a href="#contact_us.html">Contactenos</a>
                     <a href="informacion.html">Sobre Nosotros</a>
                     <a href="#">Ayuda</a>
                 </div>

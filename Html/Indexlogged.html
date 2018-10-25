@@ -1,5 +1,4 @@
 ﻿<!DOCTYPE html>
-
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 
 <head>
@@ -10,10 +9,11 @@
     <link rel="stylesheet" href="css/foundation.css">
     <link rel="stylesheet" href="css/app.css">
     <link rel="stylesheet" href="css/css.css">
+    <link rel="stylesheet" href="css/foundation-icons/foundation-icons.css">
+    <script src='js/vendor/foundation.js'></script>
 </head>
 
 <body>
-    <!--Verificar la sesion para seleccionar que navbar mostrar-->
     <!--logged navbar-->
     <header>
         <!-- Navigation Bar -->
@@ -24,39 +24,36 @@
                         <a href="index.html"><img src="Imagenes/logo.jpg" class="logo" id="Navigation_Bar_Logo" /></a>
                     </figure>
                     <li><input type="search" placeholder="Search"></li>
-                    <li><button type="button" class="button">Search</button></li>
+                    <li><button type="submit" class="button">Search</button></li>
                 </ul>
             </div>
             <div class="top-bar-right">
                 <ul class="dropdown menu" data-dropdown-menu>
-
-                    <ul class="horizontal menu" data-accordion-menu>
+                    <ul class="dropdown menu" data-accordion-menu>
                         <li><a href="index.html">Inicio</a></li>
-                        <li>
-                            <a href="#">correo</a>
+                        <li><a>Categorías</a>
                             <ul class="menu vertical nested">
-                                <li><a href="#">Perfil</a></li>
+                                <li><a href="cat.html">categoria1</a></li>
+                                <li><a href="cat.html">categoria2</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">test@m.com</a>
+                            <ul class="menu vertical nested">
+                                <li><a href="perfil.html">Perfil</a></li>
+                                <!-- Temporal -->
+                                <li><a href="cambio_clave.html">Cambio de clave</a></li>
                                 <li><a href="#">Mis Anuncios</a></li>
-                                <li><a href="nuevoanuncio.html">nuevo anuncio</a></li>
                                 <li><a href="#">Monedero</a></li>
                             </ul>
                         </li>
                         <li><a href="#">Mensajes</a></li>
-                        <li><a href="../controladores/logout_c.html">Cierra Sesión</a></li>
+                        <li><a href="../controladores/logout_c.php">Cierra Sesión</a></li>
                     </ul>
                 </ul>
             </div>
         </div>
     </header>
-
-    <!--scripts para el accordion menu-->
-    <script src="../js/vendor/vendor.js"></script>
-    <script src="../js/vendor/foundation.core.js"></script>
-    <script src="../js/vendor/foundation.util.nest.js"></script>
-    <script src="../js/vendor/foundation.accordion.js"></script>
-    <script src="../js/vendor/foundation.accordionMenu.js"></script>
-    <script src="../js/vendor/foundation.responsiveAccordionTabs.js"></script>
-    <script src="../js/vendor/docs.js"></script>
     <div class="mainb" align="center">
 
         <div class="grid-container">
@@ -452,8 +449,8 @@
                 <div class="cell auto">
                     <h4>Mapa del Sitio</h4>
                     <hr/>
-                    <a href="#">Inicio</a>
-                    <a href="#">Contactenos</a>
+                    <a href="Index.html">Inicio</a>
+                    <a href="contact_us.html">Contactenos</a>
                     <a href="informacion.html">Sobre Nosotros</a>
                     <a href="#">Ayuda</a>
                 </div>

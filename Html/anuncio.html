@@ -21,17 +21,27 @@
             <div class="top-bar-left">
                 <ul class="menu">
                     <figure>
-                        <a href="index.php"><img src="Imagenes/logo.jpg" class="logo" id="Navigation_Bar_Logo" /></a>
+                        <a href="index.html"><img src="Imagenes/logo.jpg" class="logo" id="Navigation_Bar_Logo" /></a>
                     </figure>
+
                     <li><input type="search" placeholder="Search"></li>
-                    <li><button type="button" class="button">Search</button></li>
+                    <li><button type="submit" class="button">Search</button></li>
+
                 </ul>
             </div>
             <div class="top-bar-right">
                 <ul class="dropdown menu" data-dropdown-menu>
-                    <li><a href="index.php">Inicio</a></li>
-                    <li><a href="login.php">Inicia Sesión</a></li>
-                    <li><a href="register.php">Registrate</a></li>
+                    <ul class="dropdown menu" data-accordion-menu>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a>Categorías</a>
+                            <ul class="menu vertical nested">
+                                <li><a href="cat.html">categoria1</a></li>
+                                <li><a href="cat.html">categoria2</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="login.html">Inicia Sesión</a></li>
+                        <li><a href="register.html">Regístrate</a></li>
+                    </ul>
                 </ul>
             </div>
         </div>
@@ -90,8 +100,8 @@
                 <div class="cell auto">
                     <h4>Mapa del Sitio</h4>
                     <hr/>
-                    <a href="#">Inicio</a>
-                    <a href="#">Contactenos</a>
+                    <a href="Index.html">Inicio</a>
+                    <a href="contact_us.html">Contactenos</a>
                     <a href="informacion.php">Sobre Nosotros</a>
                     <a href="#">Ayuda</a>
                 </div>

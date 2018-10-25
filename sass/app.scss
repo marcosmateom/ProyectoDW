@@ -1,3 +1,69 @@
-.error {
-    color: red;
+$error-color: red;
+.estrella {
+    font-size: .65em;
 }
+
+.error {
+    color: $error-color;
+}
+
+.img_anuncio {
+    /*height: 100%;*/
+    width: auto;
+}
+
+.anuncio {
+    .img_anuncio {
+        max-height: 180px;
+        max-width: 100%;
+        vertical-align: middle;
+    }
+    height: 180px;
+    width: 100%;
+}
+
+.cont {
+    white-space: nowrap;
+    width: auto;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.align {
+    margin: auto;
+}
+
+.mapouter {
+    text-align: right;
+    height: 500px;
+    width: 600px;
+}
+
+.gmap_canvas {
+    overflow: hidden;
+    background: none;
+    height: 400px;
+    width: 600px;
+    margin-top: 4em;
+}
+
+.fondosMonedero {
+    padding: .5rem;
+    background-color: #eaeaea;
+    border: 1px solid rgba(10, 10, 10, 0.25);
+    width: 150px;
+    height: 45px;
+    margin: .5rem;
+    margin-left: 0rem;
+}
+
+[class~=input-group-field] {
+    padding: 5px;
+}
+
+[class~=input-group-label] {
+    @extend [class~=input-group-field];
+    min-width: 55px;
+}
+
+@import "css";
