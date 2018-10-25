@@ -11,6 +11,22 @@
     <link rel="stylesheet" href="css/app.css">
     <link rel="stylesheet" href="css/css.css">
     <script src='js/vendor/foundation.js'></script>
+    <script src="js/vendor/jquery.js"></script>
+    <script>
+        $(document).ready(function() {
+            $.ajax({
+                url: 'jsons/cat_json.json',
+                dataType: "json",
+                success: function(data) {
+                    var $cat = $('#cat');
+                    $cat.empty();
+                    for (var i = 0; i < data.length; i++) {
+                        $cat.append("<li><a href=\"cat.html\">" + data[i][1] + "</a></li>");
+                    }
+                }
+            });
+        });
+    </script>
 </head>
 
 <body>
@@ -32,9 +48,7 @@
                     <ul class="dropdown menu" data-accordion-menu>
                         <li><a href="index.html">Inicio</a></li>
                         <li><a>Categorías</a>
-                            <ul class="menu vertical nested">
-                                <li><a href="cat.html">categoria1</a></li>
-                                <li><a href="cat.html">categoria2</a></li>
+                            <ul id='cat' class="menu vertical nested">
                             </ul>
                         </li>
                         <li><a href="login.html">Inicia Sesión</a></li>

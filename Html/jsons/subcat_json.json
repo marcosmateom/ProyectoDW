@@ -1,0 +1,13 @@
+{ "cat": [
+        ["1", "categoria1"],
+        ["2", "categoria2"]
+    ], "subcat": [
+        ["1", "1", "subcategoria 1.1"],
+        ["2", "1", "subcategoria 1.2"],
+        ["3", "2", "subcat 2.1"],
+        ["4", "2", "subcat 2.2"],
+        ["5", "2", "subcat 2.3"],
+        ["6", "2", "subcat 2.4"],
+        ["7", "2", "subcat 2.5"],
+        ["8", "2", "Gio"]
+    ] }
