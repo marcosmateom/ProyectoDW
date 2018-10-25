@@ -22,7 +22,6 @@
     <script>
         $(document).ready(function() {
             $.ajax({
-                type: 'POST',
                 url: 'jsons/cat_json.html',
                 dataType: "json",
                 success: function(data) {
@@ -80,6 +79,7 @@
             <div class="grid-x grid-margin-x align-center">
                 <form class="cell small-12 medium-8" action="controladores/destacado_c.html?id_add=86" method="post">
                     <h2>Destacar Anuncio</h2>
+                    <hr>
                     <h3>ad 1</h3>
                     <input type="hidden" id="id" name="id" value=7>
                     <input type="hidden" id="id2" name="id2" value=7> Fercha para inicio de destacado:
