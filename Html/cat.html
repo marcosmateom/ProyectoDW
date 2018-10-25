@@ -27,6 +27,31 @@
                 }
             });
         });
+        $(document).ready(function() {
+            $.ajax({
+                url: 'jsons/subcat_json.json',
+                dataType: "json",
+                success: function(data) {
+                    var $subc2 = $('#sub-cat');
+                    $subc2.empty();
+                    for (var e = 0; e < data['subcat'].length; e++) {
+                        if (1 == data['subcat'][e][1]) {
+                            $subc2.append('<div class="cell">' +
+                                '<a href="view_p.php?subcat=' + data['subcat'][e][0] + '">' +
+                                '<div class="card">' +
+                                '<img src="https://placehold.it/180x180">' +
+                                '<div class="card-section">' +
+                                '<h4>' + data['subcat'][e][2] + '</h4>' +
+                                '<p>Description</p>' +
+                                '</div>' +
+                                '</div>' +
+                                '</a>' +
+                                '</div>');
+                        }
+                    }
+                }
+            });
+        });
     </script>
 </head>
 
@@ -63,30 +88,7 @@
     <div class="mainb" align="center">
         <div class="grid-container">
             <!---->
-            <div class="grid-x grid-padding-x small-up-2 medium-up-3">
-
-                <div class="cell">
-                    <a href="view_p.html">
-                        <div class="card">
-                            <img src="https://placehold.it/180x180">
-                            <div class="card-section">
-                                <h4>subcategoria 1.1</h4>
-                                <p>Description</p>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="cell">
-                    <a href="view_p.html">
-                        <div class="card">
-                            <img src="https://placehold.it/180x180">
-                            <div class="card-section">
-                                <h4>subcategoria 1.2</h4>
-                                <p>Description</p>
-                            </div>
-                        </div>
-                    </a>
-                </div>
+            <div id='sub-cat' class="grid-x grid-padding-x small-up-2 medium-up-3">
             </div>
         </div>
         <!---->
