@@ -6,20 +6,11 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gio's Company Home</title>
+    <title>Gio's Company - Regístrate</title>
     <link rel="stylesheet" href="css/foundation.css">
     <link rel="stylesheet" href="css/app.css">
     <link rel="stylesheet" href="css/css.css">
     <script src='js/vendor/foundation.js'></script>
-    <style>
-        .faq {
-            font-size: 30px;
-        }
-        
-        #faqtitle {
-            text-align: center;
-        }
-    </style>
 </head>
 
 <body>
@@ -45,35 +36,34 @@
             </div>
         </div>
     </header>
-    <div class="mainb">
-        <article>
-            <div class="grid-container">
-                <h1 id="faqtitle">Preguntas Frecuentes</h1>
-                <div class="grid-x grid-margin-x">
-                    <div class="cell small-6">
-                        <ol id="faqs">
-                            <li class=faq>Como creo mi cuenta?</li>
-                            <P>En la barra de navegacion, ingrese a "Registrate" y luego llena el formulario</P>
-                            <li class=faq>Puedo pagar para destacaar un anuncio?</li>
-                            <p>Si se puede hacer esto. Primero se debe comprar credito para destacar, y luego en "mis anuncios" puede seleccionar cual de sus anucios desea destacaar y proceda a realizar el pago</p>
-                            <li class=faq>Si quiero borrar mi cuenta que hago?</li>
-                            <p>Se puede hacer de dos maneras:<br>1. Contactando a uno de nuestros representantes para pedir que se elimine la cuenta. <br>2. Si su cuenta a estado inactiva por mas de un año, esta se eliminara solita</p>
-                            <li class=faq>Es pagada la subscripcion a la pagina</li>
-                            <p>La subscripcion a Gio's corp es gratuita.</p>
-                        </ol>
-                    </div>
-                    <div class="cell small-6">
-                        <br>
-                        <br>
-                        <img src="../Imagenes/002.jpg" alt="imagen de faqs">
-                    </div>
-                </div>
-
-
+    <div class="grid-container">
+        <div class="grid-x align-center">
+            <div class="cell small-5">
+                <form class="log-in-form" action='../controladores/register_c.html' method='post'>
+                    <h4 class="text-center">Regístrate</h4>
+                    <label>Nombre:
+                        <input name='name' type="text" placeholder="Nombre" required pattern="[A-Za-z ]*">
+                    </label>
+                    <label>Apellido:
+                        <input name='last-n' type="text" placeholder="Apellido" required pattern="[A-Za-z ]*">
+                    </label>
+                    <label>E-mail:
+                        <input name='email' type="email" placeholder="somebody@example.com" required>
+                    </label>
+                    <label>Número de télefono:
+                        <input name='fnum' type="text" placeholder="01010101" required pattern="[0-9]+">
+                    </label>
+                    <label>Contaseña:
+                        <input name='pswd' id='password' type="text" placeholder="Contaseña" required>
+                    </label>
+                    <!--<input id="show-password" type="checkbox"><label for="show-password">Mostrar contraseña</label>-->
+                    <p><input type="submit" class="button expanded" value="Log in"></p>
+                </form>
+                <p>Si ya tienes una cuenta haz click <a href="Login.html">aquí</a></p>
             </div>
-        </article>
-
+        </div>
     </div>
+
     <footer>
         <div class="grid-container">
             <div class="wrap grid-x grid-margin-x">
@@ -101,8 +91,6 @@
                 </div>
             </div>
     </footer>
-
-
 
     <script src="js/vendor/jquery.js"></script>
     <script src="js/vendor/what-input.js"></script>

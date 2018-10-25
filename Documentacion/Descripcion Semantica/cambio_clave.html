@@ -5,39 +5,41 @@
 <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gio's Company - Cambio de Contraseña</title>
+    <title></title>
     <link rel="stylesheet" href="../css/foundation.css">
     <link rel="stylesheet" href="../css/app.css">
     <link rel="stylesheet" href="../css/css.css">
 </head>
 <body>
-    <header>        <!-- Navigation Bar -->
+    <header>
+        <!-- Navigation Bar -->
         <div class="top-bar" id="Navigation_Bar">
             <div class="top-bar-left">
                 <ul class="menu">
                     <figure>
-                        <a href="index.html"><img src="Imagenes/logo.jpg" class="logo" id="Navigation_Bar_Logo" /></a>
+                        <a href="index.php"><img src="Imagenes/logo.jpg" class="logo" id="Navigation_Bar_Logo" /></a>
                     </figure>
                     <li><input type="search" placeholder="Search"></li>
-                    <li><button type="button" class="button">Search</button></li>
+                    <li><button type="button" class="button"></button></li>
                 </ul>
             </div>
             <div class="top-bar-right">
                 <ul class="dropdown menu" data-dropdown-menu>
-                    <li><a href="index.html">Inicio</a></li>
-                    <li><a href="login.html">Inicia Sesión</a></li>
-                    <li><a href="register.html">Registrate</a></li>
+                    <li><a href="index.php"></a></li>
+                    <li><a href="login.php"></a></li>
+                    <li><a href="register.php"></a></li>
                 </ul>
             </div>
         </div>
     </header>
+
     <div class="mainb">
         <div class="grid-container">
             <div class="grid-x align-center">
                 <div class="cell small-5">
                     <form class="log-in-form" action='../controladores/cambiar_pswd_c.php' method='post'>
-                        <h4 class="text-center" id="cambiodecontrasenah4">Cambio de Contraseña</h4>
-                        <label id="lcontrasenia">Contaseña:
+                        <h4 class="text-center" id="cambiodecontrasenah4"></h4>
+                        <label id="lcontrasenia">
                             <input name='pswd' id='password' type="text" placeholder="Contaseña" required>
                         </label>
                         <label id="lnuevacontrasenia">Nueva Contaseña:
@@ -51,32 +53,33 @@
         </div>
     </div>
     <footer>
-            <div class="grid-container">
-                <div class="wrap grid-x grid-margin-x">
-                    <div class="cell auto">
-                        <h4>Contactenos</h4>
-                        <hr/>
-                        <a href="#"><span>Telefono</span> 1800 giosc</a>
-                        <a href="#"><span>Correo</span> info@gioscorp.com</a>
-                        <a href="#"><span>Direccion</span> 51 avenida 33-8 zona27</a>
-                    </div>
-                    <div class="cell auto">
-                        <h4>Mapa del Sitio</h4>
-                        <hr/>
-                        <a href="#">Inicio</a>
-                        <a href="#">Contactenos</a>
-                        <a href="informacion.html">Sobre Nosotros</a>
-                        <a href="#">Ayuda</a>
-                    </div>
-                    <div class="cell auto">
-                        <h4>Redes Sociales</h4>
-                        <hr/>
-                        <a href="#">Facebook</a>
-                        <a href="#">Tweeter</a>
-                        <a href="#">Instagram</a>
-                    </div>
+        <div class="grid-container">
+            <div class="wrap grid-x grid-margin-x">
+                <div class="cell auto">
+                    <h4 id="fcontactenosh4"></h4>
+                    <hr/>
+                    <a href="#"><span id="ftelefono"></span></a>
+                    <a href="#"><span id="fcorreo"></span></a>
+                    <a href="#"><span id="fDireccion"></span></a>
                 </div>
+                <div class="cell auto">
+                    <h4 id="fmapadelsitioh4"></h4>
+                    <hr/>
+                    <a href="#" id="finicio"></a>
+                    <a href="#" id="fcontactenos"></a>
+                    <a href="informacion.php" id="fsobrenossotros"></a>
+                    <a href="#" id="fayuda"></a>
+                </div>
+                <div class="cell auto">
+                    <h4 id="fredessocialesh4"></h4>
+                    <hr/>
+                    <a href="#" id="ffacebook"></a>
+                    <a href="#" id="ftweeter"></a>
+                    <a href="#" id="finstagram"></a>
+                </div>
+            </div>
     </footer>
+
         
 
 
