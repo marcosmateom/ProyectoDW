@@ -52,6 +52,9 @@
 [class~=input-group-label] {
   min-width: 55px; }
 
+.margin-ext {
+  margin: .5rem; }
+
 #Navigation_Bar_Logo {
   margin-right: 10px; }
 

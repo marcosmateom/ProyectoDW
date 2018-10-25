@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gio's Company - Informacion</title>
+    <link rel="stylesheet" href="css/foundation.css">
+    <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="css/css.css">
+    <link rel="stylesheet" href="css/foundation-icons/foundation-icons.css">
+    <script src='js/vendor/foundation.js'></script>
+    <script src="js/vendor/jquery.js"></script>
+</head>
+
+<body>
+
+    <!-- incluye al navegador-->
+    <!--Verificar la sesion para seleccionar que navbar mostrar-->
+    <script>
+        $(document).ready(function() {
+            $.ajax({
+                type: 'POST',
+                url: 'jsons/cat_json.html',
+                dataType: "json",
+                success: function(data) {
+                    var $cat = $('#cat');
+                    $cat.empty();
+                    for (var i = 0; i < data.length; i++) {
+                        $cat.append("<li><a href=\"cat.html\">" + data[i][1] + "</a></li>");
+                    }
+                }
+            });
+        });
+    </script>
+
+    <!--logged navbar-->
+    <header>
+        <!-- Navigation Bar -->
+        <div class="top-bar" id="Navigation_Bar">
+            <div class="top-bar-left">
+                <ul class="menu">
+                    <figure>
+                        <a href="index.html"><img src="Imagenes/logo.jpg" class="logo" id="Navigation_Bar_Logo" /></a>
+                    </figure>
+                    <li><input type="search" placeholder="Search"></li>
+                    <li><button type="submit" class="button">Search</button></li>
+                </ul>
+            </div>
+            <div class="top-bar-right">
+                <ul class="dropdown menu" data-dropdown-menu>
+                    <ul class="dropdown menu" data-accordion-menu>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a>Categorías</a>
+                            <ul id='cat' class="menu vertical nested">
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">test@m.com</a>
+                            <ul class="menu vertical nested">
+                                <li><a href="perfil.html">Perfil</a></li>
+                                <li><a href="cambiar_clave.html">Cambio de clave</a></li>
+                                <li><a href="perfil.html">Mis Anuncios</a></li>
+                                <li><a href="perfil.html">Monedero</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Mensajes</a></li>
+                        <li><a href="controladores/logout_c.php">Cerrar Sesión <i class="fi-x"></i></a></li>
+                    </ul>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <!-- verificar si ha iniciado sesion para acceder a esta pagina-->
+    <!-- Verificar sesion -->
+    <div class="mainb">
+        <div class="grid-container">
+            <div class="grid-x grid-margin-x align-center">
+                <form class="cell small-12 medium-8" action="controladores/destacado_c.html?id_add=86" method="post">
+                    <h2>Destacar Anuncio</h2>
+                    <h3>ad 1</h3>
+                    <input type="hidden" id="id" name="id" value=7>
+                    <input type="hidden" id="id2" name="id2" value=7> Fercha para inicio de destacado:
+                    <input type="date" name="fechainicio" min="2018-10-25" value=""> Fecha para fin de destacado:
+                    <input type="date" name="fechafin" min="2018-10-25" value="">
+                    <input class="button small-12 cell" type="submit" name="submit" value="Destacar" />
+                </form>
+                <div class="cell small-12 medium-5 margin-ext" align='center'>
+                    Monedero:
+                    <span class="fondosMonedero"> Q 45.00</span>
+                </div>
+                <div class="cell small-12 medium-5 margin-ext" align='center'>
+                    Costo por dia:
+                    <span class="fondosMonedero"> Q 10.00</span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <footer>
+        <div class="grid-container">
+            <div class="wrap grid-x grid-margin-x">
+                <div class="cell auto">
+                    <h4>Contactenos</h4>
+                    <hr/>
+                    <a href="#"><span>Telefono</span> 1800 giosc</a>
+                    <a href="#"><span>Correo</span> info@gioscorp.com</a>
+                    <a href="#"><span>Direccion</span> 51 avenida 33-8 zona27</a>
+                </div>
+                <div class="cell auto">
+                    <h4>Mapa del Sitio</h4>
+                    <hr/>
+                    <a href="index.html">Inicio</a>
+                    <a href="contact_us.html">Contactenos</a>
+                    <a href="informacion.html">Sobre Nosotros</a>
+                    <a href="#">Ayuda</a>
+                </div>
+                <div class="cell auto">
+                    <h4>Redes Sociales</h4>
+                    <hr/>
+                    <a href="#">Facebook</a>
+                    <a href="#">Tweeter</a>
+                    <a href="#">Instagram</a>
+                </div>
+            </div>
+    </footer>
+
+
+
+    <script src="js/vendor/jquery.js"></script>
+    <script src="js/vendor/what-input.js"></script>
+    <script src="js/vendor/foundation.js"></script>
+    <script src="js/app.js"></script>
+
+</body>
+
+</html>
