@@ -13,28 +13,10 @@
     <link rel="stylesheet" href="css/foundation-icons/foundation-icons.css">
     <script src='js/vendor/foundation.js'></script>
     <script src="js/vendor/jquery.js"></script>
+    <script src="js/cat.js"></script>
 </head>
 
 <body>
-
-    <!-- incluye al navegador-->
-    <!--Verificar la sesion para seleccionar que navbar mostrar-->
-    <script>
-        $(document).ready(function() {
-            $.ajax({
-                url: 'jsons/cat_json.html',
-                dataType: "json",
-                success: function(data) {
-                    var $cat = $('#cat');
-                    $cat.empty();
-                    for (var i = 0; i < data.length; i++) {
-                        $cat.append("<li><a href=\"cat.html\">" + data[i][1] + "</a></li>");
-                    }
-                }
-            });
-        });
-    </script>
-
     <!--logged navbar-->
     <header>
         <!-- Navigation Bar -->

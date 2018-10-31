@@ -11,48 +11,9 @@
     <link rel="stylesheet" href="css/app.css">
     <link rel="stylesheet" href="css/css.css">
     <link rel="stylesheet" href="../css/foundation-icons/foundation-icons.css">
-    <script src='js/vendor/foundation.js'></script>
     <script src="js/vendor/jquery.js"></script>
-    <script>
-        $(document).ready(function() {
-            $.ajax({
-                url: 'jsons/cat_json.json',
-                dataType: "json",
-                success: function(data) {
-                    var $cat = $('#cat');
-                    $cat.empty();
-                    for (var i = 0; i < data.length; i++) {
-                        $cat.append("<li><a href=\"cat.html\">" + data[i][1] + "</a></li>");
-                    }
-                }
-            });
-        });
-        $(document).ready(function() {
-            $.ajax({
-                url: 'jsons/subcat_json.json',
-                dataType: "json",
-                success: function(data) {
-                    var $subc2 = $('#sub-cat');
-                    $subc2.empty();
-                    for (var e = 0; e < data['subcat'].length; e++) {
-                        if (1 == data['subcat'][e][1]) {
-                            $subc2.append('<div class="cell">' +
-                                '<a href="view_p.php?subcat=' + data['subcat'][e][0] + '">' +
-                                '<div class="card">' +
-                                '<img src="https://placehold.it/180x180">' +
-                                '<div class="card-section">' +
-                                '<h4>' + data['subcat'][e][2] + '</h4>' +
-                                '<p>Description</p>' +
-                                '</div>' +
-                                '</div>' +
-                                '</a>' +
-                                '</div>');
-                        }
-                    }
-                }
-            });
-        });
-    </script>
+    <script src="js/cat.js"></script>
+    <script src="js/subcat.js"></script>
 </head>
 
 <body>
@@ -123,10 +84,8 @@
             </div>
     </footer>
 
-    <script src="js/vendor/jquery.js"></script>
     <script src="js/vendor/what-input.js"></script>
     <script src="js/vendor/foundation.js"></script>
-    <script src="js/app.js"></script>
 
 </body>
 

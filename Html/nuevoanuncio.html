@@ -11,21 +11,7 @@
     <link rel="stylesheet" href="css/css.css">
     <script src='js/vendor/foundation.js'></script>
     <script src="js/vendor/jquery.js"></script>
-    <script>
-        $(document).ready(function() {
-            $.ajax({
-                url: 'jsons/cat_json.json',
-                dataType: "json",
-                success: function(data) {
-                    var $cat = $('#cat');
-                    $cat.empty();
-                    for (var i = 0; i < data.length; i++) {
-                        $cat.append("<li><a href=\"cat.html\">" + data[i][1] + "</a></li>");
-                    }
-                }
-            });
-        });
-    </script>
+    <script src="js/cat.js"></script>
 </head>
 
 <body>
