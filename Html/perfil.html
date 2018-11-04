@@ -74,20 +74,27 @@
                     </ul>
 
                     <div class="tabs-content" data-tabs-content="example-tabs">
-                        <div class="tabs-panel is-active" id="panel1">
+                        <div class="tabs-panel is-active" id="panel1" role="tabpanel" aria-labelledby="panel1-label">
                             <h3>Mi Información</h3>
-                            <label>Usuario</label>
-                            <span>Nombre del cliente</span>
-                            <label>Correo</label>
-                            <span>Correo del cliente</span>
-                            <label>Teléfono</label>
-                            <span>1800 gioscorp</span>
-                            <label>Clave</label>
-                            <span>************</span><a href="cambio_clave.html"> Cambio de clave</a>
-                            <p><button class="button" data-open="actualizarInformacionModal">Actualizar Informacion</button></p>
+                            <hr>
+                            <p>Usuario:
+                                <span class="descripcion">Nombre test </span>
+                            </p>
+                            <p>Correo:
+                                <span class="descripcion">test@m.com</span>
+                            </p>
+                            <p>Telefono:
+                                <span class="descripcion">Aun no has ingresado tu telefono</span>
+                            </p>
+                            <p>Clave:
+                                <span class="descripcion">************ </span><a href="cambiar_clave.php"> Cambio de clave</a>
+                            </p>
+                            <p><button class="button" data-open="actualizarInformacionModal" aria-controls="actualizarInformacionModal" aria-haspopup="true" tabindex="0">Actualizar Informacion</button></p>
                         </div>
                         <div class="tabs-panel" id="panel2">
                             <div class="grid-container">
+                                <h3>Mis Anuncios <span class="float-right">4</span></h3>
+                                <hr>
                                 <div class="grid-x grid-margin-x align-middle">
                                     <div class="cell small-12 medium-3">
                                         <h4>Titulo del anuncio 1</h4>
@@ -162,6 +169,7 @@
                         </div>
                         <div class="tabs-panel" id="panel3">
                             <h3>Fondos del Monedero</h3>
+                            <hr>
                             <div class="fondosMonedero">
                                 <p>Q 0.00</p>
                             </div>
