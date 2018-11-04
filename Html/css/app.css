@@ -77,3 +77,20 @@ header {
   margin-left: auto;
   width: 400px;
   float: right; }
+
+.faq {
+  font-size: 30px; }
+
+#faqtitle {
+  text-align: center; }
+
+@media only screen and (max-width: 600px) {
+  #cont {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    flex-direction: column; }
+  #pic {
+    order: 2; }
+  #text {
+    order: 1; } }
