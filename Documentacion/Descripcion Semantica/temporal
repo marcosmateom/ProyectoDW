@@ -1,0 +1,49 @@
+<header>
+        <!-- Navigation Bar -->
+        <div class="top-bar" id="Navigation_Bar">
+            <div class="top-bar-left">
+                <ul class="menu">
+                    <figure>
+                        <a href="index.php"><img src="Imagenes/logo.jpg" class="logo" id="Navigation_Bar_Logo" /></a>
+                    </figure>
+                    <li><input type="search" placeholder="Search"></li>
+                    <li><button type="button" class="button"></button></li>
+                </ul>
+            </div>
+            <div class="top-bar-right">
+                <ul class="dropdown menu" data-dropdown-menu>
+                    <li><a href="index.php"></a></li>
+                    <li><a href="login.php"></a></li>
+                    <li><a href="register.php"></a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <footer>
+        <div class="grid-container">
+            <div class="wrap grid-x grid-margin-x">
+                <div class="cell auto">
+                    <h4 id="fcontactenosh4"></h4>
+                    <hr/>
+                    <a href="#"><span id="ftelefono"></span></a>
+                    <a href="#"><span id="fcorreo"></span></a>
+                    <a href="#"><span id="fDireccion"></span></a>
+                </div>
+                <div class="cell auto">
+                    <h4 id="fmapadelsitioh4"></h4>
+                    <hr/>
+                    <a href="#" id="finicio"></a>
+                    <a href="#" id="fcontactenos"></a>
+                    <a href="informacion.php" id="fsobrenossotros"></a>
+                    <a href="#" id="fayuda"></a>
+                </div>
+                <div class="cell auto">
+                    <h4 id="fredessocialesh4"></h4>
+                    <hr/>
+                    <a href="#" id="ffacebook"></a>
+                    <a href="#" id="ftweeter"></a>
+                    <a href="#" id="finstagram"></a>
+                </div>
+            </div>
+    </footer>
