@@ -1,40 +1,36 @@
-var gulp = require('gulp');
-var sass = require('gulp-sass');
-var webserver = require('gulp-webserver');
+var gulp          = require('gulp');
+var browserSync   = require('browser-sync').create();
+var $             = require('gulp-load-plugins')();
+var autoprefixer  = require('autoprefixer');
 
-//Var styles para que funcione con el watch
-var Styles_f = function(done) {
-    gulp.src('sass/**/*.scss')
-        .pipe(sass().on('error', sass.logError))
-        .pipe(gulp.dest('html/css/'));
-    done();
+var sassPaths = [
+  'node_modules/foundation-sites/scss',
+  'node_modules/motion-ui/src'
+];
+
+function sass() {
+  return gulp.src('scss/*.scss')
+    .pipe($.sass({
+      includePaths: sassPaths,
+      outputStyle: 'compressed' // if css compressed **file size**
+    })
+      .on('error', $.sass.logError))
+    .pipe($.postcss([
+      autoprefixer({ browsers: ['last 2 versions', 'ie >= 9'] })
+    ]))
+    .pipe(gulp.dest('html/css/'))
+    .pipe(browserSync.stream());
 };
 
-var Styles_f2 = function(done) {
-    gulp.src('sass/**/*.scss')
-        .pipe(sass().on('error', sass.logError))
-        .pipe(gulp.dest('../proyectodb/css/'));
-    done();
-};
+function serve() {
+  browserSync.init({
+    server: "./html"
+  });
 
-gulp.task('styles', Styles_f);
-gulp.task('stylesdb', Styles_f2);
+  gulp.watch("scss/*.scss", sass);
+  gulp.watch("html/*.html").on('change', browserSync.reload);
+}
 
-//Watch task
-gulp.task('watch', function() {
-    gulp.watch('sass/**/*.scss', Styles_f);
-});
-
-gulp.task('watchdb', function() {
-    gulp.watch('sass/**/*.scss', Styles_f2);
-});
-
-gulp.task('webserver', function() {
-    gulp.src('html')
-        .pipe(webserver({
-            fallback: './index.html',
-            livereload: true,
-            directoryListing: true,
-            open: true
-        }));
-});
+gulp.task('sass', sass);
+gulp.task('serve', gulp.series('sass', serve));
+gulp.task('default', gulp.series('sass', serve));
