@@ -25,18 +25,26 @@ $altura_msj_container: 350px;
     border-radius: 25px;
 }
 
+@mixin direccion_msj($left:false, $right:false) {
+    @if $left {
+        border-bottom-left-radius: 0px;
+        background-color: white;
+    }
+    @if $right {
+        border-bottom-right-radius: 0px;
+        background-color: #eaeaea;
+    }
+    color: #0a0a0a;
+}
+
 .msj_sent {
     @extend .msj;
-    border-bottom-right-radius: 0px;
-    background-color: #eaeaea;
-    color: #0a0a0a;
+    @include direccion_msj($left: false, $right: true);
 }
 
 .msj_received {
     @extend .msj;
-    border-bottom-left-radius: 0px;
-    background-color: white;
-    color: #0a0a0a;
+    @include direccion_msj($left: true, $right: false);
 }
 
 .msj_time {
