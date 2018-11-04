@@ -1,4 +1,5 @@
 $error-color: red;
+$add_height: 180px;
 .estrella {
     font-size: .65em;
 }
@@ -14,11 +15,11 @@ $error-color: red;
 
 .anuncio {
     .img_anuncio {
-        max-height: 180px;
+        max-height: $add_height;
         max-width: 100%;
         vertical-align: middle;
     }
-    height: 180px;
+    height: $add_height;
     width: 100%;
 }
 
