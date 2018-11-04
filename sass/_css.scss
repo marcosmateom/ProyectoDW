@@ -6,6 +6,7 @@ footer {
     padding: 80px 0px 40px 0px;
     background-color: darkslategray;
     color: white;
+    margin-top: 10px;
 }
 
 footer a {
@@ -13,11 +14,11 @@ footer a {
 }
 
 header {
-    padding: 0px 0px 80px 0px;
+    padding: 0px 0px 20px 0px;
 }
 
 .mainb {
-    padding: 0px 0px 100px 0px;
+    //padding: 91px 0px 100px 0px;
 }
 
 .imagendeanuncio {
@@ -34,12 +35,18 @@ header {
 #faqtitle {
     text-align: center;
 }
+
 @media only screen and (max-width: 600px) {
-    #cont{display:flex;
-    flex-flow: row wrap;
-    justify-content:space-between;
-    flex-direction:column;
+    #cont {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        flex-direction: column;
     }
-    #pic{order:2}
-    #text{order:1}
+    #pic {
+        order: 2
+    }
+    #text {
+        order: 1
+    }
 }

@@ -1,5 +1,6 @@
 $error-color: red;
 $add_height: 180px;
+$altura_msj_container: 350px;
 .estrella {
     font-size: .65em;
 }
@@ -11,6 +12,48 @@ $add_height: 180px;
 .img_anuncio {
     /*height: 100%;*/
     width: auto;
+}
+
+.msj_container {
+    background-color: #e6e6e6;
+    min-height: $altura_msj_container;
+    border: .5px solid rgba(10, 10, 10, 0.25);
+}
+
+.msj {
+    margin-top: 10px;
+    border-radius: 25px;
+}
+
+.msj_sent {
+    @extend .msj;
+    border-bottom-right-radius: 0px;
+    background-color: #eaeaea;
+    color: #0a0a0a;
+}
+
+.msj_received {
+    @extend .msj;
+    border-bottom-left-radius: 0px;
+    background-color: white;
+    color: #0a0a0a;
+}
+
+.msj_time {
+    font-size: .6em;
+    float: right;
+    padding-top: 20px;
+}
+
+.msj_title {}
+
+#msj_texto {
+    border-radius: 25px;
+}
+
+#msj_button {
+    @extend #msj_texto;
+    height: 40px;
 }
 
 .anuncio {
