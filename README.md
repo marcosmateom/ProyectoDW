@@ -1,30 +1,47 @@
-# ProyectoDW
-Proyecto de diseño web
-Funcionalidades y evaluación Diseño web:
-Responsivo (móvil y desktop)
-Homepage con listado de búsqueda y categorías
-Datos del anuncio deben traerse e inyectarse en la pagina por medio de un json y usando
-angular js
-Pagina de anuncio
-Pagina de creación de anuncio
-Pagina pagina de registro y login
-Pagina de perfil de usuario
-Pagina de contacto por anuncio
-Pagina de información e historia de la compañía (pagina web)
-Pagina de contacto con la compañía (pagina web)
-Página de preguntas frecuentes.
-Deberá implementar al menos un mixin utilizando buenas prácticas de implementación y
-con sentido adecuado dentro del proyecto..
-Fuentes y build en ambiente de desarrollo, fuentes versionadas en repositorio.
-Cualquier consideración y programación necesaria para cumplir con el planteamiento del
-requerimiento.
-Documentación:
-Manual funcional y técnico con wireframes. Description semántica de la estructura html
-de cada pagina.
-Set de htmls funcionales generados con contenido de muestra y final según sea el caso
-con sus respectivas librerías. Entrega en ambiente de desarrollo funcional en web server
-local como el visto en clase.
-Tecnologías: Angular, foundation, Sass.
-Entregables: Fuentes en repositorio web (github), cada alumno con 10 commits,
-documentación. Listado de tareas efectuadas por cada integrante del grupo con %
-completado por cada uno. (podría ser verificable en el historial de git
+# Foundation for Sites Template
+
+**Please open all issues with this template on the main [Foundation for Sites](https://github.com/zurb/foundation-sites/issues) repo.**
+
+This is the basic starter project for [Foundation for Sites 6](http://foundation.zurb.com/sites). It includes a Sass compiler and a starter HTML file for you.
+
+## Installation
+
+To use this template, your computer needs:
+
+- [NodeJS](https://nodejs.org/en/) (0.12 or greater)
+- [Git](https://git-scm.com/)
+
+This template can be installed with the Foundation CLI, or downloaded and set up manually.
+
+### Using the CLI
+
+Install the Foundation CLI with this command:
+
+```bash
+npm install foundation-cli --global
+```
+
+Use this command to set up a blank Foundation for Sites project with this template:
+
+```bash
+foundation new --framework sites --template basic
+```
+
+The CLI will prompt you to give your project a name. The template will be downloaded into a folder with this name.
+
+### Manual Setup
+
+To manually set up the template, first download it with Git:
+
+```bash
+git clone https://github.com/zurb/foundation-sites-template projectname
+```
+
+Then open the folder in your command line, and install the needed dependencies:
+
+```bash
+cd projectname
+npm install
+```
+
+Finally, run `npm start` to run the Sass compiler. It will re-run every time you save a Sass file.
